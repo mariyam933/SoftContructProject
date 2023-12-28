@@ -16,33 +16,33 @@
 
 // */
 
-public class ChangePasswordTest {
-    // covers oldPassField.getText().equals(cs.getPassword()),
-    // oldPassField.getText().equals(cs.getPassword()) is true,
-    // oldPassField.getText().equals(cs.getPassword()) is false
+public class ChangePasswordFrameTest {
+  // covers oldPassField.getText().equals(cs.getPassword()),
+  // oldPassField.getText().equals(cs.getPassword()) is true,
+  // oldPassField.getText().equals(cs.getPassword()) is false
 
-    // newPassField.getText().length() = 0,
-    // newPassField.getText().length() > 0
-    public void changePasswordWithCorrectOldPassword() throws Exception {
-    }
+  // newPassField.getText().length() = 0,
+  // newPassField.getText().length() > 0
+  public void changePasswordWithCorrectOldPassword() throws Exception {
+  }
 
-    // covers oldPassField.getText().equals(cs.getPassword()),
-    // oldPassField.getText().equals(cs.getPassword()) is true,
-    // oldPassField.getText().equals(cs.getPassword()) is false
+  // covers oldPassField.getText().equals(cs.getPassword()),
+  // oldPassField.getText().equals(cs.getPassword()) is true,
+  // oldPassField.getText().equals(cs.getPassword()) is false
 
-    // newPassField.getText().length() = 0,
-    // newPassField.getText().length() > 0
-    public void changePasswordWithIncorrectOldPassword() throws Exception {
-    }
+  // newPassField.getText().length() = 0,
+  // newPassField.getText().length() > 0
+  public void changePasswordWithIncorrectOldPassword() throws Exception {
+  }
 
-    // covers oldPassField.getText().equals(cs.getPassword()),
-    // oldPassField.getText().equals(cs.getPassword()) is true,
-    // oldPassField.getText().equals(cs.getPassword()) is false
+  // covers oldPassField.getText().equals(cs.getPassword()),
+  // oldPassField.getText().equals(cs.getPassword()) is true,
+  // oldPassField.getText().equals(cs.getPassword()) is false
 
-    // oldPassField.getText().length() = 0
+  // oldPassField.getText().length() = 0
 
-    // newPassField.getText().length() = 0,
-    // newPassField.getText().length() > 0
-    public void changePasswordWithEmptyOldPassword() throws Exception {
-    }
+  // newPassField.getText().length() = 0,
+  // newPassField.getText().length() > 0
+  public void changePasswordWithEmptyOldPassword() throws Exception {
+  }
 }
