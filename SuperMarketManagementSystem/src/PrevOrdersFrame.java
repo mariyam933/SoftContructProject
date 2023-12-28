@@ -9,25 +9,26 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 /**
- *
- * @author waniya_mustafa
+ * The `PrevOrdersFrame` class represents a frame for displaying the previous orders of a customer
+ * in the grocery management system.
  */
 public class PrevOrdersFrame extends javax.swing.JFrame {
 
+    // Reference to the customer whose previous orders are being displayed
     customer cs = null;
 
     /**
-     * Creates new form PrevOrdersFrame
+     * Creates a new instance of `PrevOrdersFrame`.
+     *
+     * @param cs The customer object representing the current user.
      */
     public PrevOrdersFrame(customer cs) {
         this.cs = cs;
         ArrayList<order> or;
         initComponents();
+
+        // Set background image
         ImageIcon background_img = new ImageIcon("/Users/waniya_mustafa/Desktop/SMMS_Images/previousOrderFrame.jpeg", "");
         Image img = background_img.getImage();
         Image temp_img = img.getScaledInstance(1000, 820, Image.SCALE_SMOOTH);
@@ -40,8 +41,10 @@ public class PrevOrdersFrame extends javax.swing.JFrame {
         backBtn.setOpaque(true);
                 this.setLocationRelativeTo(null);
 
-        
+         // Set default close operation
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+
+        // Retrieve customer's orders
         or = cs.getOrders();
         String[] col = {"ID", "Name", "Quantity", "Price"};
         DefaultTableModel tableModel = new DefaultTableModel(null, col);
@@ -54,6 +57,8 @@ public class PrevOrdersFrame extends javax.swing.JFrame {
         colModel.getColumn(3).setPreferredWidth(80);
         DefaultCellEditor editor = (DefaultCellEditor) ordersTable.getDefaultEditor(Object.class);
         editor.setClickCountToStart(20);
+
+        // Populate the table with previous orders
         for (int i = 0; i < or.size(); i++) {
 
             if (or.get(i).getType().equals("prev")) {
@@ -147,6 +152,13 @@ public class PrevOrdersFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+ * Handles the action when the "Back" button is clicked in the PrevOrdersFrame.
+ * This method sets the visibility of the current frame to false, effectively
+ * hiding it and allowing the user to navigate back to the previous frame or window.
+ *
+ * @param evt The ActionEvent triggered when the "Back" button is clicked.
+ */
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
