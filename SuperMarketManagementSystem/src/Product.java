@@ -1,3 +1,8 @@
+/**
+ * The `Product` class represents a general product with common attributes such as ID,
+ * quantity, price, name, type, description, and image path. It provides methods to
+ * set and get these attributes, as well as compute the total price based on a specified quantity.
+ */
 class Product {
 
   private int ID;
@@ -94,12 +99,20 @@ class Product {
     return this.imgPath;
   }
 
-  //compute Price
+  /**
+     * Computes the total price of the product based on the given quantity.
+     *
+     * @param quantity The quantity of the product.
+     * @return The total price computed as the product of quantity and the unit price.
+     */
   public double computrPrice(int quantity) {
     return quantity * this.price;
   }
 }
-//Drive Class Electronics from Product
+/**
+ * The `Electronics` class extends the `Product` class and represents electronic products.
+ * It inherits attributes and methods from the `Product` class.
+ */
 class Electronics extends Product {
 
   public Electronics(
@@ -113,7 +126,11 @@ class Electronics extends Product {
     super(id, quantity, price, name, type, desc, imgPath);
   }
 }
-//Drive Class cosmetics from Product
+
+/**
+ * The `Cosmetics` class extends the `Product` class and represents cosmetic products.
+ * It inherits attributes and methods from the `Product` class.
+ */
 class Cosmetics extends Product {
   public Cosmetics(
       int id,
@@ -126,7 +143,12 @@ class Cosmetics extends Product {
     super(id, quantity, price, name, type, desc, imgPath);
   }
 }
-//Drive class FruitAndVegitables from Product
+
+
+/**
+ * The `FruitAndVegetables` class extends the `Product` class and represents fruit and vegetable products.
+ * It inherits attributes and methods from the `Product` class.
+ */
 class FruitAndVegitables extends Product {
 
   public FruitAndVegitables(
@@ -141,7 +163,11 @@ class FruitAndVegitables extends Product {
   }
 }
 
-//class Households from Product
+
+/**
+ * The `Households` class extends the `Product` class and represents household products.
+ * It inherits attributes and methods from the `Product` class.
+ */
 class Households extends Product {
 
   public Households(
@@ -156,7 +182,10 @@ class Households extends Product {
   }
 }
 
-//class Dairy from Product
+/**
+ * The `Dairy` class extends the `Product` class and represents dairy products.
+ * It inherits attributes and methods from the `Product` class.
+ */
 class Dairy extends Product {
 
   public Dairy(
@@ -170,7 +199,10 @@ class Dairy extends Product {
     super(id, quantity, price, name, type, desc, imgPath);
   }
 }
-//class kitchen from Product
+/**
+ * The `Kitchen` class extends the `Product` class and represents kitchen products.
+ * It inherits attributes and methods from the `Product` class.
+ */
 class kitchen extends Product {
 
   public kitchen(
