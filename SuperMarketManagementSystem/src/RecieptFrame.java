@@ -11,9 +11,10 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+/**
+ * The `RecieptFrame` class represents a GUI frame displaying the receipt of a customer's order.
+ * It includes details such as the products purchased, quantities, prices, and the grand total.
+ * Users can go back to the previous frame or print the receipt.
  */
 
 public class RecieptFrame extends javax.swing.JFrame {
@@ -21,7 +22,9 @@ public class RecieptFrame extends javax.swing.JFrame {
     customer cs = null;
 
     /**
-     * Creates new form RecieptFrame
+     * Creates a new instance of the `RecieptFrame` with the specified customer.
+     *
+     * @param cs The customer associated with the receipt frame.
      */
     public RecieptFrame(customer cs) {
         this.cs = cs;
@@ -211,6 +214,11 @@ public class RecieptFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Handles the action when the "Back" button is clicked.
+     *
+     * @param evt The ActionEvent representing the button click.
+     */
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
         ArrayList<order> ors = cs.getOrders();
@@ -223,6 +231,11 @@ public class RecieptFrame extends javax.swing.JFrame {
         this.setVisible(false);
     }// GEN-LAST:event_backBtnActionPerformed
 
+     /**
+     * Handles the action when the "Print Receipt" button is clicked.
+     *
+     * @param evt The ActionEvent representing the button click.
+     */
     private void receiptPrintBtnActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_receiptPrintBtnActionPerformed
         // TODO add your handling code here:
         ArrayList<order> ors = cs.getOrders();
