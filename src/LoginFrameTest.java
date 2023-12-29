@@ -1,3 +1,4 @@
+
 /*
  * Partitioning Strategy for LoginFrame Class Testing
  *
@@ -24,7 +25,8 @@
      - Trigger the login action.
      - Verify that an error message is displayed for empty fields.
    
-// */
+ */
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LoginFrameTest {
 
@@ -34,6 +36,12 @@ public class LoginFrameTest {
   // successful login.
 
   public void testLoginWithValidCredentials() {
+    LoginFrame loginFrame = new LoginFrame();
+    loginFrame.IDField.setText("1");
+    loginFrame.pssField.setText("123");
+
+    loginFrame.loginBtn.doClick();
+
   }
 
   // Verifies that the login process correctly fails when invalid user credentials
@@ -41,6 +49,12 @@ public class LoginFrameTest {
   // Validates that the system displays the correct error message for incorrect
   // passwords.
   public void testLoginWithInvalidCredentials() {
+    LoginFrame loginFrame = new LoginFrame();
+    loginFrame.IDField.setText("1");
+    loginFrame.pssField.setText("1234");
+
+    loginFrame.loginBtn.doClick();
+
   }
 
   // Verifies that the login process correctly handles empty user ID or password
@@ -49,5 +63,10 @@ public class LoginFrameTest {
   // fields.
 
   public void testLoginWithEmptyFields() {
+    LoginFrame loginFrame = new LoginFrame();
+    loginFrame.IDField.setText("");
+    loginFrame.pssField.setText("");
+
+    loginFrame.loginBtn.doClick();
   }
 }
